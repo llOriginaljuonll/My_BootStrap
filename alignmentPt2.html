@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap ที่ใช้ในการฝึกคือ Bootstrap version 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" style="margin-top:20px;">
+        <!-- Float & Fixed Position Responsive -->
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2023/07/17/06/03/ai-generated-8131916_640.jpg" class="float-start">
+            <p>Float Start</p>
+        </div>
+        <!-- ภาพลอยด้านซ้ายสุด ตัวอักษรอยู่ถัดจากรูปภาพ -->
+
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2023/07/17/06/03/ai-generated-8131916_640.jpg" class="float-end">
+            <p>Float End</p>
+        </div>
+        <!-- ภาพลอยด้านขวาสุด ตัวอักษรอยู่ด้านซ้ายสุด -->
+
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2023/07/17/06/03/ai-generated-8131916_640.jpg" class="float-none">
+            <p>Float None</p>
+        </div>
+        <!-- 
+            คำอธิบาย Kongruksiam บอกว่าไม่ต้องการให้ภาพลอย แต่การที่ไม่เขียน 'class="float-none" 
+            'ก็ทำให้ภาพไม่ลอยเหมือนกับตอนเขียนเหมือนกัน ยังไม่รู้ว่าแตกต่างกันยังไง 
+        -->
+        
+        <!-- ClearFix -->
+        <!-- Before add ClearFix คำว่า Hello Bootstrap 5 จะขึ้นมาแทรกระหว่าง Button -->
+        <div class="bg-success">
+            <button class="float-start">Float Left</button>
+            <button class="float-end">Float Right</button>
+        </div>
+            <h3>Hello Bootstrap 5</h3>
+
+        <!-- After add ClearFix -->
+        <div class="bg-success clearfix">
+            <button class="float-start">Float Left</button>
+            <button class="float-end">Float Right</button>
+        </div>
+        <h3>Hello Bootstrap 5</h3>
+
+        <!-- Fixed -->
+        <!-- fixed-top ทำให้ข้อความถูก'ตรึง'ไว้ด้านซ้ายบน -->
+        <!-- fixed-bottom ทำให้ข้อความถูก'ตรึง'ไว้ด้านซ้ายล่าง -->
+        <!-- 
+            sticky-top ทำให้ข้อความที่ใส่คลาสนี้ไว้แล้วถ้าเลื่อนถึงเพดานเว็บด้านบนมันจะถูกตรึงอยู่ตรงนั้นไม่เลื่อนหายไป
+            จากหน้าจอ
+        -->
+
+        <h3 class="fixed-top">Hello Bootstrap 5</h3>
+        <h3 class="sticky-top">Sticky Top</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis explicabo, molestias itaque libero laboriosam sit eum molestiae qui ducimus amet similique reprehenderit, hic labore nihil cumque neque perspiciatis ab blanditiis.</p>
+        <h3 class="fixed-bottom">Fixed Bottom</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates minus vel soluta, laboriosam tempora provident rem quo autem. Voluptatem ipsum similique, quidem officia optio aliquid alias consequuntur ducimus nisi.</p>
+            
+        <!-- Invisible ทำให้ข้อความที่ระบุคลาสนี้หายไป-->
+        <!-- Visible แสดงข้อความ -->
+        <h1 class="visible">Hello Visible</h1>
+    </div>
+</body>
+</html>
