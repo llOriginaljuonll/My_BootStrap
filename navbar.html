@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+
+    <!-- Bootstrap ที่ใช้ในการฝึกคือ Bootstrap version 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- 
+    navbar = คือแถบข้างบน 
+    การเพิ่มเติม container ใน div ที่มี navbar ครอบไว้ ผลของการแสดงจะแตกต่างออกไปจากทุกที
+    navbar จะแยกออกเป็นสองส่วน
+        1.Brand จะอยู่ด้านซ้ายบน
+        2.Menu จะอยู่ด้านขวาบน
+    nav-link ใส่ใน element "a" ช่วยให้เส้น link หายไป
+    ** nav-item ยังไม่รู้ว่าการมีอยู่ของมันข่วยในเรื่องของอะไร ?
+-->
+
+    <nav class="navbar navbar-expand-sm">
+        <!-- Content -->
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a href="#" class="navbar-brand">KongRukSiam.Com</a>
+            <!-- Menu -->
+            <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+            </ul> 
+        </div>
+    </nav>
+    <br>
+
+    <!-- Navbar Color -->
+    <!-- 
+        โทนสีของ navbar มีสองโทน คือ navbar-light และ navbar-dark
+     -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-success">
+        <!-- Content -->
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a href="#" class="navbar-brand">KongRukSiam.Com</a>
+            <!-- Menu -->
+            <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+            </ul> 
+        </div>
+    </nav>
+
+    <br>
+    <!-- Navbar Toggle -->
+    <!-- 
+        Navbar Toggle คือ การสร้าง Button เก็บรายการเวลาที่เว็บแสดงผลในมือถือที่มีหน้าจอแสดงผลเล็กกว่าในคอม แถบ Navbar จะได้ไม่กินพื้นที่การแสดงผลมากเกินไป "ถ้าเปิดในหน้าเว็บที่มีขนาดการแสดงผลมากพอ Button นั้นจะไม่ปรากฎแต่จะปรากฎเมนูที่เราได้จัดเก็บไว้ออกมาแทน"
+        วิธีสร้าง Navbar Toggle
+        1.สร้าง div ครอบ list ที่เราต้องการจะจัดเก็บ
+        2.สร้าง button (อยู่นอก div 1.)
+        3.button เพิ่ม navbar-toggler ใน class
+        4.button เพิ่ม data-bs-toggle="collapse" ระบุวิธีจัดเก็บข้อมูล
+        5.div เพิ่ม collapse navbar-collapse ใน class
+        6.ระบุ id ใน div นั้น
+        7.button เพิ่ม data-bs-target="#{ชื่อไอดีของ div นั้นในการจัดเก็บ}"
+     -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <!-- Content -->
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a href="#" class="navbar-brand">KongRukSiam.Com</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu -->
+           <div class="collapse navbar-collapse" id="navbarToggle">
+                <ul class="navbar-nav">
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">Product</a>
+                    </li>
+                </ul> 
+           </div>
+        </div>
+    </nav>
+
+    <br>
+    <!-- Navbar Form -->
+    <!-- 
+        d-flex เป็นการบอกให้ภาชนะที่"ถูกครอบ" ในภาชนะที่เราระบุ d-flex นี้ มีการจัดเรียงเป็นแถวแนวนอน
+        form-control = คือการปรับแต่งใน "เวอร์ชั่นของฟอร์ม"
+        input type="submit" 
+            1.เป็นการสร้าง Button ขึ้นมา
+            2.ถ้าเราต้องการใส่ข้อความใน Button นั้น ให้ระบุค่า value="ข้อความที่เราต้องการอยากจะใส่"
+        form น่าจะมีความหลากหลายมากกว่านี้ ในที่นี้ยกตัวอย่างฟอร์มแถบค้นหา
+     -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
+        <!-- Content -->
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a href="#" class="navbar-brand">KongRukSiam.Com</a>
+            <!-- Menu -->
+            <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <form class="d-flex">
+                    <input type="text" class="form-control me-2" id="" placeholder="ค้นหาข้อมูล">
+                    <input type="submit" value="ค้นหา" class="btn btn-outline-dark">
+                </form>
+            </ul> 
+        </div>
+    </nav>
+
+    <br>
+    <!-- Fixed -->
+    <!-- 
+        fixed-top คือ การตรึง navbar ด้านบน
+        fixed-bottom คือ การตรึง navbar ด้านล่าง
+        sticky-top คือ การเลื่อน navbar ที่เราระบุค่าไปหลังจากเจอแล้ว navbar นั้นจะติดข้างบนไปตลอดๆไม่สามารถเลื่อนผ่านได้
+     -->
+     <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-bottom">
+        <!-- Content -->
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a href="#" class="navbar-brand">KongRukSiam.Com</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu -->
+           <div class="collapse navbar-collapse" id="navbarToggle">
+                <ul class="navbar-nav">
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">Product</a>
+                    </li>
+                </ul> 
+           </div>
+        </div>
+    </nav>
+
+    <br>
+    <!-- Dropdown Menu -->
+    <!-- 
+        1.โฟกัสไปที่ "<li>สินค้า</li>"
+        2.เพิ่ม dropdown-toggle ลงใน class ของ สินค้า
+        3.เพิ่ม property data-bs-toggle="dropdown" ลงใน สินค้า
+        4.สร้าง <ul></ul> แล้วระบุ dropdown-menu ลงใน class
+        5.<ul></ul> ตามข้อ 4. นี้จะอยู่ภายใต้สินค้า และครอบรายการที่เราต้องการให้เป็นตัวที่ถูกจัดเก็บ dropdown
+        6.ระบุ dropdown-item ลงใน <li></li> ที่เราต้องการจัดเก็บ
+    -->
+    <!-- 
+        class="dropdown-item" ตกแต่งให้การแสดงรายการสวยงามขึ้น
+        class="dropdown-toggle" สร้างสัญลักษณ์ dropdown
+        data-bs-toggle="dropdown" สร้างการแสดงผลแบบ dropdown
+        class="dropdown-menu" จัดเก็บ item ลงใน dropdown
+      -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
+        <!-- Content -->
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a href="#" class="navbar-brand">KongRukSiam.Com</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu -->
+           <div class="collapse navbar-collapse" id="navbarToggle">
+                <ul class="navbar-nav">
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    <li class="navbar-item dropdown">
+                        <a href="#"
+                        class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown">สินค้า</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">เฟอร์นิเจอร์</a></li>
+                            <li><a href="#" class="dropdown-item">อุปกรณ์คอมพิวเตอร์</a></li>
+                        </ul>
+                    </li>
+                </ul> 
+           </div>
+        </div>
+    </nav>
+</body>
+</html>

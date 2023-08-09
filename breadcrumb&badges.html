@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreadCrumb & Badges</title>
+
+    <!-- Bootstrap ที่ใช้ในการฝึกคือ Bootstrap version 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 
+        Breadcrumb คือเครื่อองมือที่ใช้นำทางเว็บให้ผู้ใช้ได้ทราบว่า ผู้ใช้เว็บได้ใช้งานที่ส่วนไหนของเว็บ
+        Breadcrumb navigation is a trail of text links (breadcrumbs) that tell users where they are on website and how they got there.
+        Badge คือ ป้ายชื่อ
+     -->
+     <!-- 
+        class="d-flex justify-content-between" => แยก content ให้อยู่ตำแหน่งที่แยกออกจากกันในระยะทางที่เท่ากัน
+      -->
+    <div class="container" style="margin-top: 20px;">
+        <!-- สร้าง BreadCrumb -->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">สินค้า</li>
+            <li class="breadcrumb-item">เฟอร์นิเจอร์</li>
+            <li class="breadcrumb-item active">โซฟา</li>
+        </ol>
+        <!-- แบบ Link -->
+        <ol class="breadcrumb class=breadcrumb">
+            <li class="breadcrumb-item"><a href="#">สินค้า</a></li>
+            <li class="breadcrumb-item"><a href="#">เฟอร์นิเจอร์</a></li>
+            <li class="breadcrumb-item "><a href="#">โซฟา</a></li>
+        </ol>
+
+        <!-- Badge -->
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between">สินค้าทั้งหมด<span class="badge bg-success">45</span></li>
+            <li class="list-group-item d-flex justify-content-between">เฟอร์นิเจอร์<span class="badge bg-primary">15</span></li>
+            <li class="list-group-item d-flex justify-content-between">เครื่องใช้ไฟฟ้า<span class="badge bg-danger">15</span></li>
+            <li class="list-group-item d-flex justify-content-between">เครื่องสำอางค์<span class="badge bg-warning">15</span></li>
+        </ul>
+    </div>
+</body>
+</html>
